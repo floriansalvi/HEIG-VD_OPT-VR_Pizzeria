@@ -1,39 +1,44 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import '../aframe/duplicate.js';
 
-const color = ref('black');
+onMounted(() => {
+  const ocean = document.querySelector('#ocean');
 
+  const startAudioOnce = () => {
+    if (!ocean?.components?.sound) return;
+
+    ocean.components.sound.playSound();
+    window.removeEventListener('click', startAudioOnce);
+  };
+
+  window.addEventListener('click', startAudioOnce);
+});
 </script>
 
 <template>
     <a-entity position="0 -.3 0">
         <a-ocean
+            id="ocean"
             color="aqua"
-            width="100"
-            depth="100"
-            density="50"
+            width="50"
+            depth="50"
+            density="25"
             amplitude="0"
             amplitude-variance="0.1"
             speed="1"
             opacity=".75"
+            sound="
+                src: #ocean-sound;
+                autoplay: false;
+                loop: true;
+                positional: true;
+                volume: 2;
+                maxDistance: 30;
+                refDistance: 2.5;
+            "
         ></a-ocean>
-        <a-box
-            height=".6"
-            width="1"
-            depth="1"
-            position="-7 0 -7"
-            color="green"
-            duplicate="rows: 15; cols: 15; gap: 0"
-        ></a-box>
-        <a-hexagon
-            radius="0.5"
-            height="0.1"
-            color="black"
-            position="0 1 0"
-            create-tiles
-        ></a-hexagon>
-        <a-entity light="type: ambient; intensity: 3; color: #fff"></a-entity>
-        <a-entity light="type: point; intensity: 7" position="0 10 -15"></a-entity> 
+        <!-- <a-entity light="type: ambient; intensity: 3; color: #fff"></a-entity> -->
+        <!-- <a-entity light="type: point; intensity: 7" position="0 10 -15"></a-entity>  -->
     </a-entity>
 </template>

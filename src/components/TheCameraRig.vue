@@ -25,6 +25,7 @@
         camera
         position="0 1.65 0"
       >
+      <!-- position="0 1.65 0" -->
         <a-entity
           geometry="primitive: circle; radius: 0.0003;"
           material="shader: flat; color: white;"
