@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import '../aframe/duplicate.js';
 import '../aframe/kitchen-counter.js';
+import '../aframe/clickable.js';
 
 const color = ref('black');
 
@@ -11,6 +12,7 @@ const color = ref('black');
     <a-entity position="0 0 0">
         <a-entity
             my-kitchen-counter
+            clickable
             position="0 0.875 0"
             shadow="cast: true; receive: true"
         >

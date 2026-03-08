@@ -1,9 +1,10 @@
 <script setup>
   import { ref } from 'vue';
+  import '../aframe/game-manager.js';
   import '../aframe/clickable.js';
   import '../aframe/outline.js'
+  import '../aframe/simple-navmesh-constraint.js';
   import TheOcean from './TheOcean.vue';
-  import BaseTable from './BaseTable.vue';
   import TheRestaurant from './TheRestaurant.vue';
   import TheCameraRig from './TheCameraRig.vue';
 
@@ -18,6 +19,7 @@
     shadow="type: pcfsoft"
     outline
     vr-mode-ui="enabled: true"
+    game-manager
   >
 
     <a-assets @loaded="allAssetsLoaded = true">
@@ -55,11 +57,21 @@
 
     <template v-if="allAssetsLoaded">
       <TheOcean
-        position="0 -1 27.85"
+        position="0 -1 -29.6"
       />
       <TheRestaurant
-        position="0 0 0"
+        position="-1.4 0 -1.75"
+        rotation="0 180 0"
       />
+      <a-plane
+        class="navmesh"
+        data-role="nav-mesh"
+        position="-.5 0 0"
+        rotation="-90 0 0"
+        width="1.9"
+        height="1"
+        visible="false">
+      </a-plane>
     </template>
 
     <TheCameraRig />

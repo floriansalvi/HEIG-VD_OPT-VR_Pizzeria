@@ -20,17 +20,15 @@ AFRAME.registerComponent('my-kitchen-counter', {
     });
 
     geometry.rotateX(-Math.PI / 2);
-
     geometry.computeBoundingBox();
     geometry.center();
-
     geometry.computeVertexNormals();
 
     const material = new THREE.MeshStandardMaterial({
-        color: '#d1d1d1',
-        metalness: 1,
-        roughness: 0.45,
-        envMapIntensity: 1.2
+      color: '#d1d1d1',
+      metalness: 1,
+      roughness: 0.45,
+      envMapIntensity: 1.2
     });
 
     const mesh = new THREE.Mesh(geometry, material);
@@ -38,5 +36,31 @@ AFRAME.registerComponent('my-kitchen-counter', {
     mesh.receiveShadow = true;
 
     this.el.setObject3D('mesh', mesh);
+
+
+    /* =========================
+       LOGIQUE GAMEPLAY
+       ========================= */
+
+    this.el.addEventListener('click', () => {
+
+      // éviter plusieurs pizzas
+      if (document.querySelector('#pizza')) return;
+
+      const pizza = document.createElement('a-entity');
+
+      pizza.setAttribute('id', 'pizza');
+      pizza.setAttribute('pizza', '');
+
+      // visuel temporaire
+      pizza.setAttribute('geometry', 'primitive: cylinder; radius:0.22; height:0.02');
+      pizza.setAttribute('material', 'color:#f5d6a1');
+
+      pizza.setAttribute('position', '0 0.06 0');
+
+      this.el.appendChild(pizza);
+
+    });
+
   }
 });

@@ -4,6 +4,7 @@ import '../aframe/duplicate.js';
 import DuplicatePlace from './DuplicatePlace.vue';
 import TheKitchen from './TheKitchen.vue';
 import '../aframe/clickable.js'
+import '../aframe/order-screen.js';
 
 
 const isLightOn = ref(true);
@@ -143,6 +144,29 @@ function handleLightToggle() {
             shadow="cast: true; receive: true"
         >
         </a-plane>
+
+        <a-entity
+            id="order-screen"
+            order-screen
+            position="0 1.5 -2"
+            visible="false">
+            
+            <a-plane
+                width="1.2"
+                height="0.8"
+                color="#111">
+            </a-plane>
+
+            <a-text
+                id="order-text"
+                value="Waiting for order..."
+                align="left"
+                position="-0.55 0.3 0.01"
+                width="1.1"
+                color="#ffffff">
+            </a-text>
+
+        </a-entity>
 
 
         <a-plane
