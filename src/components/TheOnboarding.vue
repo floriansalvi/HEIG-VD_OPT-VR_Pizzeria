@@ -19,7 +19,7 @@
 <template>
   <div id="onboarding" v-if="showOnboarding">
     <div>
-      <h1>A-Frame + Vite + Vue Boilerplate</h1>
+      <h1>VR Pizzeria</h1>
       <p v-if="!loaded">loading...</p>
       <button v-if="loaded" @click="enterScene()">Enter scene</button>
       <div class="licences">
@@ -40,58 +40,66 @@
             </li>
           </ul>
         </section>
-        <section>
-          <h4>Source code</h4>
-          <blockquote><a href="https://github.com/Chabloz/a-frame-vite-vue-boilerplate">Github repo</a></blockquote>
-        </section>
         <dl>
           <dt>
             <i>Included</i>
           </dt>
           <dt>
-            <a href="https://github.com/c-frame/aframe-extras" target="_blank">aframe-extras</a>
-          </dt><dd>
-            <a href="https://github.com/c-frame/aframe-extras/blob/master/LICENSE" target="_blank">MIT License</a>
-          </dd>
-
-          <dt>
-            <a href="https://github.com/c-frame/physx" target="_blank">aframe physx</a>
-          </dt><dd>
-            <a href="https://github.com/c-frame/aframe-extras/blob/master/LICENSE" target="_blank">MIT License</a>
-          </dd>
-
-          <dt>
-            <a href="https://github.com/jure/aframe-blink-controls/" target="_blank">aframe-blink-controls</a>
-          </dt><dd>
-            <a href="https://github.com/jure/aframe-blink-controls/blob/main/LICENSE" target="_blank">MIT License</a>
-          </dd>
-
-          <dt>
-            <a href="https://github.com/diarmidmackenzie/aframe-multi-camera/" target="_blank">aframe-multi-camera</a>
-          </dt><dd>
-            <a href="https://github.com/diarmidmackenzie/aframe-multi-camera/blob/main/LICENSE" target="_blank">MIT License</a>
-          </dd>
-
-          <dt>
-            <a href=" https://github.com/AdaRoseCannon/aframe-xr-boilerplate" target="_blank">simple-navmesh-constraint</a>
-          </dt><dd>
-            By Ada Rose Cannon under MIT License
-          </dd>
-
-          <dt>
-            <a href="https://sketchfab.com/3d-models/vr-gallery-1ac32ed62fdf424498acc146fad31f7e" target="_blank">VR Gallery</a>
-          </dt><dd>
-            by <a href="https://sketchfab.com/mvrc.art" target="_blank">Maxim Mavrichev</a>
+            <a href="https://sketchfab.com/3d-models/table-with-tablecloth-50bd4cc3a141400cb84ea66fd8dfb2a6" target="_blank">Table with tablecloth</a>
+          </dt>
+          <dd>
+            by <a href="https://sketchfab.com/yarelon111" target="_blank">Yarelon</a>
             under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
           </dd>
 
           <dt>
-            <a href="https://sketchfab.com/3d-models/3d-gallery-for-vr-projects-68f77ed8558c4bd59e0a13e2cc9d1fd1" target="_blank">Physic room model</a>
-          </dt><dd>
-            by <a href="https://sketchfab.com/tekuto1s" target="_blank">tekuto1s</a>
+            <a href="https://sketchfab.com/3d-models/lunch-plate-school-project-eef24ebe601c4e2f99da3108ddc3b09b#download" target="_blank">Lunch plate</a>
+          </dt>
+          <dd>
+            by <a href="https://sketchfab.com/FrenchBaguette" target="_blank">Ole Gunnar Isager</a>
             under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
           </dd>
 
+          <dt>
+            <a href="https://sketchfab.com/3d-models/copper-candlestick-a733b4ab7cd64106b17ff685568f16d6" target="_blank">Copper candlestick</a>
+          </dt>
+          <dd>
+            by <a href="https://sketchfab.com/shuvalov.di" target="_blank">shuvalov.di</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+          <dt>
+            <a href="https://sketchfab.com/3d-models/wooden-chair-1b78be3a0a0e46ebbd7c0c12ee676ec0" target="_blank">Wooden chair</a>
+          </dt>
+          <dd>
+            by <a href="https://sketchfab.com/StainlessReality" target="_blank">Stainless Reality Ltd</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+          <dt>
+            <a href="https://sketchfab.com/3d-models/broom-dba39c4dbed747fab4adb5cd2819e97c" target="_blank">Broom</a>
+          </dt>
+          <dd>
+            by <a href="https://sketchfab.com/1-3D.com" target="_blank">1-3D.com</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+          <dt>
+            <a href="https://freesound.org/people/norwayjohn/sounds/404685/" target="_blank">Ocean cret</a>
+          </dt>
+          <dd>
+            by <a href="https://freesound.org/people/norwayjohn/" target="_blank">norwayjohn</a>
+            under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0</a>
+          </dd>
+
+          <dt>
+            <a href="https://freesound.org/people/YeshniGounden/sounds/654223/" target="_blank">Turning a light switch on</a>
+          </dt>
+          <dd>
+            by <a href="https://freesound.org/people/YeshniGounden/" target="_blank">YeshniGounden</a>
+            under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+          </dd>
+          <p>Les tableaux ont été trouvés sur Sketchfab mais, ne sont plus disponibles.</p>
         </dl>
       </div>
     </div>
@@ -101,7 +109,7 @@
 <style scoped>
   h1 { font-size: 1.5rem }
   a {
-    color: #eee;
+    color: #1e1e1e;
     text-decoration: none;
   }
   .licences {
@@ -124,8 +132,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #333;
-    color: #ccc;
+    background-color: #fafafa;
+    color: #1e1e1e;
     width: 100vw;
     height: 100vh;
     padding: 1rem;
